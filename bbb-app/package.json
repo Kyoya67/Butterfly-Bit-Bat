@@ -11,8 +11,10 @@
   "dependencies": {
     "@web3modal/wagmi": "^3.4.0",
     "next": "14.0.4",
+    "next-auth": "^4.24.5",
     "react": "^18",
     "react-dom": "^18",
+    "siwe": "^2.1.4",
     "viem": "^1.19.13",
     "wagmi": "^1.4.10"
   },
