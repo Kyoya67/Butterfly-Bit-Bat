@@ -13,7 +13,8 @@ export default function Auth() {
   const { signMessageAsync } = useSignMessage();
 
   const [userAddress, setUserAddress] = useState("");
-  const [nftOwned, setNftOwned] = useState(false);
+  // const [nftOwned, setNftOwned] = useState(false);
+  const [nftOwned, setNftOwned] = useState(true);
 
   const nftContractAddress = "0xD96aD6440d0DE875F0Aa5Bbd25f19D208636F72E";
 
@@ -87,19 +88,27 @@ export default function Auth() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center">
-      {!isConnected && <w3m-button />}
-      {isConnected &&
-        (nftOwned ? (
-          <button
-            onClick={handleLogin}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >
-            Sign Message to Login
-          </button>
-        ) : (
-          <p>nftを購入してください</p>
-        ))}
-    </main>
+    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-br from-purple-500 to-indigo-700 p-6">
+  <div className="z-10 flex w-full max-w-md flex-col items-center justify-center rounded-lg bg-white p-8 shadow-2xl">
+    {!isConnected && (
+      <div className="flex w-full justify-center transform rounded-lg bg-[#47A1FF] px-5 py-3 text-xl font-bold text-white transition duration-300 ease-in-out hover:bg-[#47A1FF] hover:scale-105">
+      <w3m-button />
+    </div>
+    )}
+    {isConnected && (
+      nftOwned ? (
+        <button
+          onClick={handleLogin}
+          className="w-full transform rounded-lg bg-green-500 px-5 py-3 text-xl font-bold text-white transition duration-300 ease-in-out hover:bg-green-600 hover:scale-105"
+        >
+          Sign Message to Login
+        </button>
+      ) : (
+        <p className="mt-4 text-lg text-white">Please purchase an NFT to login</p>
+      )
+    )}
+  </div>
+</main>
+
   );
 }
