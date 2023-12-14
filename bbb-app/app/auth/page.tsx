@@ -14,8 +14,8 @@ export default function Auth() {
   const { signMessageAsync } = useSignMessage();
 
   const [userAddress, setUserAddress] = useState("");
-  // const [nftOwned, setNftOwned] = useState(false);
-  const [nftOwned, setNftOwned] = useState(true);
+  const [nftOwned, setNftOwned] = useState(false);
+  // const [nftOwned, setNftOwned] = useState(true);
 
   const nftContractAddress = "0xD96aD6440d0DE875F0Aa5Bbd25f19D208636F72E";
 
