@@ -5,6 +5,7 @@ import { useAccount, useNetwork, useSignMessage } from "wagmi";
 import { getCsrfToken, signIn } from "next-auth/react";
 import { ethers } from "ethers";
 import nftContractABI from "./abi/nftContract.json";
+import Link from "next/link";
 
 export default function Auth() {
   const [mounted, setMounted] = useState(false);
@@ -104,7 +105,14 @@ export default function Auth() {
           Sign Message to Login
         </button>
       ) : (
-        <p className="mt-4 text-lg text-white">Please purchase an NFT to login</p>
+        <div className="">
+        <p className="mt-4 text-black text-xl font-bold">NFTを購入してください。</p>
+        <Link href="https://opensea.io/collection/butterfly-broken-bat-1">
+          <button className="mt-4 rounded bg-blue-500 px-6 py-2 text-white transition duration-300 ease-in-out hover:bg-blue-700">
+            NFTを購入
+          </button>
+        </Link>
+        </div>
       )
     )}
   </div>
