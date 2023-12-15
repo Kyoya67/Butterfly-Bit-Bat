@@ -14,8 +14,8 @@ export default function Auth() {
   const { signMessageAsync } = useSignMessage();
 
   const [userAddress, setUserAddress] = useState("");
-  // const [nftOwned, setNftOwned] = useState(false);
-  const [nftOwned, setNftOwned] = useState(true);
+  const [nftOwned, setNftOwned] = useState(false);
+  // const [nftOwned, setNftOwned] = useState(true);
 
   const nftContractAddress = "0x666dA5F2FCDA493b02bD8B2F34A6422Fdfc533c8";
 
@@ -107,7 +107,7 @@ export default function Auth() {
       ) : (
         <div className="">
         <p className="mt-4 text-black text-xl font-bold">NFTを購入してください。</p>
-        <Link href="https://opensea.io/collection/butterfly-broken-bat-1">
+        <Link href="https://testnets.opensea.io/collection/unidentified-contract-ad89ccb3-4d95-45cd-8477-0301">
           <button className="mt-4 rounded bg-blue-500 px-6 py-2 text-white transition duration-300 ease-in-out hover:bg-blue-700">
             NFTを購入
           </button>
