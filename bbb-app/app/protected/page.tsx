@@ -41,7 +41,7 @@ export default function HiddenPage() {
         <p className="my-2 text-center text-sm text-gray-600">
           Begin by making your first treasury deposit. Learn more about managing a DAO treasury.
         </p>
-        <Link href="https://discord.com/invite/z8U4Y2dQ" className="mt-4 rounded bg-blue-500 px-6 py-2 text-white transition duration-300 ease-in-out hover:bg-blue-700">
+        <Link href="https://discord.gg/kK4PtAGp" className="mt-4 rounded bg-blue-500 px-6 py-2 text-white transition duration-300 ease-in-out hover:bg-blue-700">
             Deposit funds
         </Link>
       </div>

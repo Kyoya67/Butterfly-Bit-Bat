@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex h-screen flex-col items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 p-6">
+    <main className="flex h-screen flex-col items-center justify-center bg-[url('./public/back.png')] bg-cover p-6">
       <div className="z-10 flex w-full max-w-md flex-col items-center justify-center rounded-lg bg-white p-8 shadow-lg">
         <h1 className="text-3xl font-bold text-gray-800">Welcome Back!</h1>
         <p className="mt-2 text-sm text-gray-600">Sign in to continue</p>
