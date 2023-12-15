@@ -17,7 +17,7 @@ export default function Auth() {
   // const [nftOwned, setNftOwned] = useState(false);
   const [nftOwned, setNftOwned] = useState(true);
 
-  const nftContractAddress = "0xD96aD6440d0DE875F0Aa5Bbd25f19D208636F72E";
+  const nftContractAddress = "0x666dA5F2FCDA493b02bD8B2F34A6422Fdfc533c8";
 
   useEffect(() => setMounted(true), []);
   if (!mounted) return <></>;
